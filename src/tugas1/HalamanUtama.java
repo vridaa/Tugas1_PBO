@@ -124,6 +124,13 @@ public class HalamanUtama extends JFrame implements ActionListener {
             }else if(tinggi.isEmpty()){
                 throw new Exception("tinggi belom di masukkan!!");
             }
+            if(!inputpanjang.getText().matches("[0-9]*")){
+                 throw new Exception("inputan panjang harus angka!!");
+            } else if(!inputlebar.getText().matches("[0-9]*")) {
+                throw new Exception("inputan lebar harus angka!!");              
+            }else if(!inputtinggi.getText().matches("[0-9]*")) {
+                throw new Exception("inputan tinggi harus angka!!");              
+            }
         } catch(Exception error){
             JOptionPane.showMessageDialog(null, error.getMessage());
             return;
